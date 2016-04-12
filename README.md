@@ -1,8 +1,8 @@
 # Excluding Code from Webpack Bundles
 
- This repo illustrates how to use Webpack's `null-loader` and the 
- `UglifyJsPlugin`'s dead code removal behavior to completely remove modules 
- and code paths from a production build. This is useful for exposing 
+ This repo illustrates how to use Webpack's `null-loader`, the `DefinePlugin`,
+ and the `UglifyJsPlugin`'s dead code removal behavior to completely remove 
+ modules and code paths from a production build. This is useful for exposing 
  additional functionality that might come in handy during testing or active 
  development but should never be shipped to the end user. This repo also 
  takes advantage of the `html-webpack-plugin` module to auto generate the HTML 
