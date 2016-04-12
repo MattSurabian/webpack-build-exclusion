@@ -54,8 +54,8 @@
 ### Prod
 
  Cut a prod build to `./dist/prod` with the command `npm run build:prod`. 
- This build does not support QA Mode or console statements and completely 
- removes all QA code paths and replaces the qa-helper module with an empty one.
+ This build does not support QA Mode or console statements, completely 
+ removes all QA code paths, and replaces the qa-helper module with an empty one.
  
 ## Verifying The Output 
 
