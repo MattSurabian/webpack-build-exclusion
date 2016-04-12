@@ -1,7 +1,7 @@
 'use strict';
 
 var webpack = require('webpack');
-var HtmlWepbackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
     extensions: ['', '.min.js', '.js']
   },
   plugins: [
-    new HtmlWepbackPlugin({
+    new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
       inject: 'body',
