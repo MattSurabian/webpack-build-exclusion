@@ -3,6 +3,7 @@
 var webpack = require('webpack');
 var HtmlWepbackPlugin = require('html-webpack-plugin');
 var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 module.exports = {
   context: __dirname,
@@ -40,6 +41,9 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       QA_MODE: false
+    }),
+    new UglifyJsPlugin({
+      drop_console: true
     })
   ]
 };

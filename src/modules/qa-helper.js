@@ -31,8 +31,4 @@ export default class QaHelper {
   alterState() {
     this.app.state = 'State modified by QA helper class';
   }
-
-  newState() {
-    this.app.state = 'Waka waka';
-  }
 }

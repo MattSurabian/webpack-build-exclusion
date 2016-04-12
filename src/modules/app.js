@@ -1,6 +1,5 @@
 /* global QA_MODE */
 'use strict';
-
 import QaHelper from './qa-helper';
 
 export default class App {
@@ -14,8 +13,10 @@ export default class App {
     document.querySelector('body').appendChild(docFrag);
 
     this.state = 'Default App State';
-    this.setQa(QaHelper);
-
+    
+    if (QA_MODE) {
+      this.qa = new QaHelper(this);
+    }
   }
   
   get state() {
@@ -32,16 +33,11 @@ export default class App {
     console.log('App method');
   }
 
-  setQa(QaHelper) {
-    if (QA_MODE) {
-      this.qa = new QaHelper(this);
-    }
-  }
-
   appQaMethod() {
     if (!QA_MODE) {
       return;
     }
+    this.state = 'Modified by App QA Method Helper'
     console.log('App QA method');
   }
 }
