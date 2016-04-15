@@ -43,7 +43,9 @@ module.exports = {
       QA_MODE: false
     }),
     new UglifyJsPlugin({
-      drop_console: true
+      compress: {
+        drop_console: true
+      }
     })
   ]
 };
